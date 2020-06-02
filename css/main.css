@@ -20,6 +20,10 @@ a {
   color: inherit;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 #mapid {
   height: 380px;
 }
@@ -197,6 +201,8 @@ section {
   max-width: 500px;
   margin: auto;
   animation: airplane-hover 5s infinite linear alternate;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
   z-index: 5;
 }
 
@@ -232,10 +238,24 @@ section {
 
 .hero-info {
   position: relative;
+  text-align: center;
   color: #fff;
-  font-size: 30px;
+  font-size: 20px;
   z-index: 2;
 }
+
+@media (min-width: 700px) {
+  .hero-info {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .hero-info {
+    font-size: 40px;
+  }
+}
+
 .hero-image svg {
   height: 100%;
   width: 100%;
@@ -246,12 +266,6 @@ section {
   /* display: none; */
 }
 
-@media (min-width: 500px) {
-  .hero-cloud {
-    display: block;
-  }
-}
-
 .hero-cloud img {
   width: 100%;
 }
@@ -259,22 +273,37 @@ section {
 .hero-cloud-0 {
   right: 287px;
   bottom: -120px;
-  /* transform: translate(287px, -120px); */
   width: 500px;
+  animation: cloud-hover 7s infinite linear alternate;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
 }
 
 .hero-cloud-1 {
   top: -116px;
   right: -260px;
-  /* transform: translate(-116px, 260px); */
   width: 500px;
+  animation: cloud-hover 9s infinite linear alternate;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
 }
 
 .hero-cloud-2 {
   bottom: 61px;
   left: -247px;
-  /* transform: translate(61px, -247px); */
   width: 500px;
+  animation: cloud-hover 10s infinite linear alternate;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+@keyframes cloud-hover {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(30px);
+  }
 }
 
 g {

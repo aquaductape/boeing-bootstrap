@@ -12,16 +12,14 @@ const circle = L.circle([15.45, 18.73], {
   fillColor: "blue",
   fillOpacity: 0.2,
   radius: 16170000,
-  // radius: 1017000,
 }).addTo(map);
 
 const airplaneIcon = L.icon({
+  // relative to leaflet source, which sits in root
   iconUrl: "./assets/img/airplane-icon.svg",
   iconSize: [28, 28],
   color: "#fff",
   fillColor: "#fff",
-  // iconAnchor: [0, 0],
-  // popupAnchor: [-3, -76],
 });
 
 L.marker([15.45, 18.73], { icon: airplaneIcon }).addTo(map);

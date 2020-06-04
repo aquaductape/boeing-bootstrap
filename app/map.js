@@ -16,7 +16,7 @@ const circle = L.circle([15.45, 18.73], {
 }).addTo(map);
 
 const airplaneIcon = L.icon({
-  iconUrl: "../assets/img/airplaneIcon.svg",
+  iconUrl: "../assets/img/airplane-icon.svg",
   iconSize: [28, 28],
   color: "#fff",
   fillColor: "#fff",

@@ -1,11 +1,9 @@
 const map = L.map("mapid").setView([15.45, 18.73], 2);
 
 L.tileLayer(
-  "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png",
+  "https://api.mapbox.com/styles/v1/lishipu/ckb0ww18w16a11joc0z74t6ti/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibGlzaGlwdSIsImEiOiJja2Iwd3RwbHAwZHplMzRueHg0NTgxNTd4In0.vV13iJIxpnhaI-0hFHuqwg",
   {
     maxZoom: 20,
-    attribution:
-      '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
   }
 ).addTo(map);
 
